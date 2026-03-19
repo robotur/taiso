@@ -1,100 +1,84 @@
-# Hybrid Analog Synthesizer with Oscilloscope Display
+# RB-1 Hybrid Analog Synthesizer
 
-A 25-key, 2-octave hybrid analog synthesizer with real-time waveform visualization. Digital oscillator core with an analog filter stage, built into a fully 3D printed enclosure.
+RB-1 is a portable 2-octave hybrid analog synthesizer.
 
----
+# Overview
 
-## Overview
+Everybody in my generation knows that they're killing their own potential by constantly looking at their phones. I present RB-1 as the alternative. Designed to make real music accessible without the judgement of social media, without being led into subscriptions and without having to spend hundreds of hours infront of a computer. I don't have access to a synthesizer, and I don't think FL studio and cracked plugins are the future of composition. This is my answer.
 
-This project combines a digitally generated polyphonic sound engine with an analog OTA filter stage, giving it genuine analog character while remaining tuning-stable and preset-capable. A 2.8" TFT display shows the output waveform in real time, current octave, and active keys.
+# How it works
 
----
+Hybrid analog means the sound created is Digital, it gets converted into analog and can be manipulated like an analog signal. Basically means the sound profile is very similar to a classic synthesizer, the filtration step of the sound is exactly the same as those big Moog synthesizers, the only difference being it's more stable because there isn't actually thousands of resistors and capacitors creating the sound, in its core it's a raspberry pi instead. Arguably worse, but definitely better considering cost.
 
-## Features
+# Controls
 
-- 25-key keyboard (2 octaves) with octave shift buttons (+/- to cover full range)
-- 8-voice polyphony
-- 4 waveforms: sine, sawtooth, square, triangle
-- Analog filter stage (LM13700 OTA) with cutoff and resonance control
-- Full ADSR envelope per voice
-- Real-time oscilloscope display (ILI9341 2.8" TFT)
-- Battery powered (2x 18650)
-- 3D printed enclosure (Bambu P1S, split in 3 sections)
+There's 8 knobs for controlling volume;
+1-4: ADSR (directly controls raspi output)
+6-7: Cutoff & resonance (controls the output of DAC)
 
----
+1 - Attack
+2 - Decay
+3 - Sustain
+4 - Release
+5 - Cutoff
+6 - Resonance
+7 - Master Volume
+8 - Custom (empty)
 
-## Controls
+2 buttons for scrolling up-down octaves,
+5 buttons for layering sounds;
+Record,
+Delete,
+Layer 1 - Layer 2 - Layer 3. (If recording, switches to the layer / If full, turns on-off loop of recording)
+Layer activations are synced with BPM to make timing easier.
 
-| Control | Function |
-|---|---|
-| Attack | Envelope attack time |
-| Decay | Envelope decay time |
-| Sustain | Envelope sustain level |
-| Release | Envelope release time |
-| Cutoff | Analog filter cutoff frequency |
-| Resonance | Filter resonance (self-oscillates at max) |
-| Volume | Master output volume |
-| Waveform | Selects sine / saw / square / tri |
-| Oct – / Oct + | Shifts keyboard octave down or up |
+Record button remembers whatever order of keys you pressed and its sound profile to be looped until pressed again.
+Delete cleans the layer you're on. Holding down Delete cleans all 3 layers.
 
----
+Display: The display shows the soundwave of whatever sound is being exported. Will layer 3 different soundwaves if there are multiple layers active.
 
-## System Architecture
+# Current development stage
 
-```
-Keys (MX switches) → 74HC165 Shift Registers → RP2040
-                                                    |
-                                              Dual Core:
-                                   Core 0: Audio synthesis + DAC
-                                   Core 1: Key scan + Display
-                                                    |
-                                             PCM5102A DAC
-                                                    |
-                                        LM13700 Analog Filter
-                                     (Cutoff + Resonance via pots)
-                                                    |
-                                          Op-amp output stage
-                                                    |
-                                            3.5mm audio jack
-```
+The CAD model is roughly done, but not ready for printing yet. Currently finishing up electronics schematic, will then move onto PCB design and finalise CAD model & assembly. Firmware will be made after CAD & electronics, i'm waiting to fully set the input/outputs.
 
----
+# What's next?
+Funding will allow me to move RB from schematics to a working prototype. I'm going to get the physical body as quickly as I can and move onto the PCB, making sure that it will fit, testing any electrical connections as a final check and ordering the necessary parts. When the pcb arrives, assembly and soldering will be made, and RB-1 will be ready for testing.
 
-## Hardware
+Future:
+I want to add more features like vocal sampling with a microphone, more layers, ability to add drums (with drumpads maybe), more usability for the screen.
+In the future I definitely want to make a piece of software that connects to RB and allows you to make something like those DJ/Concert backgrounds from what you're playing, send it to a monitor for live or export as video file. I'm thinking about a 3 octave model too, but I need anodized aluminum, and a cnc machine to make the body for that.
 
-| Component | Part |
-|---|---|
-| MCU | Raspberry Pi RP2040 |
-| DAC | PCM5102A (I2S) |
-| Analog Filter | LM13700 OTA |
-| Display | ILI9341 2.8" TFT (SPI) |
-| Key Scanning | 2x 74HC165 shift registers |
-| Switches | 25x MX Silent Linear |
-| Power | 2x 18650 → TP4056 → MT3608 5V boost → 3.3V LDO |
-| Knobs | 8x potentiometers |
+# Why I built this
 
----
+I wanted to create something that could atleast replicate the feeling of being in one of those rooms that has a massive wooden desk with like.. a thousand tracks on it and a slider for each one. I don't know. I've never been in one. Nor do I know its name. But I know that there are people who've been making music for 50 years and are now unable to use those because they simply cannot compete when there's plugins, cracked FL studio's, a million beatmakers on youtube, you get the point. I want the whatever teenager in some unknown country (people like me basically) to be able to use, feel and know what it feels to use a real synthesizer. The closest one to me is an hour away, I literally have to cross a continent to get there, and there's a worker literally protecting the machine 24/7 and it's unplugged anyway. I don't blame them ofcourse, the machine DOES cost 10,000$+ after all, but it means that I will probably never get to use it unless I'm 40 years old or beat thousands of other ambitious people in a race of "success". I knew there had to be a way, and basically; acting like it's analog is the answer, apparently. Here is RB-1.
 
-## Enclosure
+# About the builder
 
-- Fully 3D printed (FDM, Bambu P1S)
-- Split into 3 sections along keybed length to fit 256x256mm bed
-- 2-part design: top panel + bottom tray
-- Recessed screen bezel for clean flush fit
-- Foam strip at key bottom-out point for dampening
+i'm from turkey. i grew up with a conservative muslim family, and because of my brother's lead and influence, i found a way to differentiate myself from my 20 or so cousins that live the exact same life. in the middle of a family that didn't even think of art, i somehow grew up listening to daft punk; my guess is that it affected me so much because it was radically different than what i saw every day. these songs and the people who made them shaped the way i think about life, and taught me to not care. to do what I want. i want to show people like me, even if they didn't have a brother like mine; what's out there.
 
----
 
-## Project Status
 
-- [ ] Enclosure design (Fusion 360)
-- [ ] PCB schematic (KiCad)
-- [ ] Firmware (RP2040 — polyphony, ADSR, display)
-- [ ] Full renders
-- [ ] Build
 
----
 
-## Funding
 
-Submitted under the Blueprint Tiers program — targeting Tier 2 ($0–200).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inspired by the minimoog. Dedicated to Giorgio Moroder and Murat Özdil.
