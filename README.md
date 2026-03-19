@@ -16,16 +16,17 @@ There's 8 knobs for controlling volume;
 1-4: ADSR (directly controls raspi output)
 6-7: Cutoff & resonance (controls the output of DAC)
 
-1 - Attack
-2 - Decay
-3 - Sustain
-4 - Release
-5 - Cutoff
-6 - Resonance
-7 - Master Volume
-8 - Custom (empty)
+ - Attack
+ - Decay
+ - Sustain
+ - Release
+ - Cutoff
+ - Resonance
+ - Master Volume
+ - Custom (empty)
 
 2 buttons for scrolling up-down octaves,
+
 5 buttons for layering sounds;
 Record,
 Delete,
