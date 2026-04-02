@@ -1,10 +1,10 @@
-# TEAL Hybrid Analog Synthesizer
+# Taiso Hybrid Analog Synthesizer
 
-TEAL is a portable 2-octave hybrid analog synthesizer.
+Taiso is a portable 2-octave hybrid analog synthesizer.
 
 # Overview
 
-Everybody in my generation knows that they're killing their own potential by constantly looking at their phones. I present TEAL as the alternative. Designed to make real music accessible without the judgement of social media, without being led into subscriptions and without having to spend hundreds of hours infront of a computer. I don't have access to a synthesizer, and I don't think FL studio and cracked plugins are the future of composition. This is my answer.
+Everybody in my generation knows that they're killing their own potential by constantly looking at their phones. I present Taiso as the alternative. Designed to make real music accessible without the judgement of social media, without being led into subscriptions and without having to spend hundreds of hours infront of a computer. I don't have access to a synthesizer, and I don't think FL studio and cracked plugins are the future of composition. This is my answer.
 
 # How it works
 
@@ -43,7 +43,7 @@ Display: The display shows the soundwave of whatever sound is being exported. Wi
 Rough CAD model done and a part of the power lines are done in the schematic.
 
 # What's next?
-Funding will allow me to move RB from schematics to a working prototype. I'm going to get the physical body as quickly as I can and move onto the PCB, making sure that it will fit, testing any electrical connections as a final check and ordering the necessary parts. When the pcb arrives, assembly and soldering will be made, and TEAL will be ready for testing.
+Funding will allow me to move RB from schematics to a working prototype. I'm going to get the physical body as quickly as I can and move onto the PCB, making sure that it will fit, testing any electrical connections as a final check and ordering the necessary parts. When the pcb arrives, assembly and soldering will be made, and Taiso will be ready for testing.
 
 Future:
 I want to add more features like vocal sampling with a microphone, more layers, ability to add drums (with drumpads maybe), more usability for the screen.
@@ -51,7 +51,7 @@ In the future I definitely want to make a piece of software that connects to RB 
 
 # Why I built this
 
-I wanted to create something that could atleast replicate the feeling of being in one of those rooms that has a massive wooden desk with like.. a thousand tracks on it and a slider for each one. I don't know. I've never been in one. Nor do I know its name. But I know that there are people who've been making music for 50 years and are now unable to use those because they simply cannot compete when there's plugins, cracked FL studio's, a million beatmakers on youtube, you get the point. I want the whatever teenager in some unknown country (people like me basically) to be able to use, feel and know what it feels to use a real synthesizer. The closest one to me is an hour away, I literally have to cross a continent to get there, and there's a worker literally protecting the machine 24/7 and it's unplugged anyway. I don't blame them ofcourse, the machine DOES cost 10,000$+ after all, but it means that I will probably never get to use it unless I'm 40 years old or beat thousands of other ambitious people in a race of "success". I knew there had to be a way, and basically; acting like it's analog is the answer, apparently. Here is TEAL.
+I wanted to create something that could atleast replicate the feeling of being in one of those rooms that has a massive wooden desk with like.. a thousand tracks on it and a slider for each one. I don't know. I've never been in one. Nor do I know its name. But I know that there are people who've been making music for 50 years and are now unable to use those because they simply cannot compete when there's plugins, cracked FL studio's, a million beatmakers on youtube, you get the point. I want the whatever teenager in some unknown country (people like me basically) to be able to use, feel and know what it feels to use a real synthesizer. The closest one to me is an hour away, I literally have to cross a continent to get there, and there's a worker literally protecting the machine 24/7 and it's unplugged anyway. I don't blame them ofcourse, the machine DOES cost 10,000$+ after all, but it means that I will probably never get to use it unless I'm 40 years old or beat thousands of other ambitious people in a race of "success". I knew there had to be a way, and basically; acting like it's analog is the answer, apparently. Here is Taiso.
 
 # About the builder
 
