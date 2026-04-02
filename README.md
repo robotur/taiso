@@ -40,7 +40,7 @@ Display: The display shows the soundwave of whatever sound is being exported. Wi
 
 # Current development stage
 
-The CAD model is roughly done, but not ready for printing yet. Currently finishing up electronics schematic, will then move onto PCB design and finalise CAD model & assembly. Firmware will be made after CAD & electronics, i'm waiting to fully set the input/outputs.
+Rough CAD model done and a part of the power lines are done in the schematic.
 
 # What's next?
 Funding will allow me to move RB from schematics to a working prototype. I'm going to get the physical body as quickly as I can and move onto the PCB, making sure that it will fit, testing any electrical connections as a final check and ordering the necessary parts. When the pcb arrives, assembly and soldering will be made, and TEAL will be ready for testing.
