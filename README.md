@@ -2,6 +2,9 @@
 
 Taiso is a portable 2-octave hybrid analog synthesizer.
 
+
+biiig note: THIS README IS EXRTREMELY OUTDATED SPECS-WISE BUT THE POINT STILL STANDS (KINDA)
+I FAILED FOR NOW.
 # Overview
 
 Everybody in my generation knows that they're killing their own potential by constantly looking at their phones. I present Taiso as the alternative. Designed to make real music accessible without the judgement of social media, without being led into subscriptions and without having to spend hundreds of hours infront of a computer. I don't have access to a synthesizer, and I don't think FL studio and cracked plugins are the future of composition. This is my answer.
