@@ -6,7 +6,7 @@ currently working to ship to Hack Club PHANTOM.
 
 lil demo:       
 - https://wokwi.com/projects/480036402492236801     
-- https://youtu.be/BU_JOI64sTc
+
 
 # Overview
 You can't live without art; if you say you don't then you either don't know what Art means, or you have a miserable life. Art isn't just paintings or music - it's also everything else around you, from cars & buildings to your clothing. - 
