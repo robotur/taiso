@@ -4,7 +4,7 @@ Taiso is a portable 2-octave digital synthesizer.
 
 currently working to ship to Hack Club PHANTOM.
 
-lil demo: - https://wokwi.com/projects/480036402492236801
+lil demo: - https://wokwi.com/projects/480036402492236801     
           - https://youtu.be/BU_JOI64sTc
 
 # Overview
