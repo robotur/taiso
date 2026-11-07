@@ -14,6 +14,9 @@ You can't live without art; if you say you don't then you either don't know what
 Regardless of your accessibility & connection to art, everyone should have the *option* to make art. I want it to be as accessible as possible so I made TAISO. I want both a grumpy right-wing 70 y/o, AND a random kid in a different continent to be able to make art. In art; I know the most about music. I also happen to be an engineer, so I hope I'm using my skills for good.
 
 # Architecture
+
+[info is slightly outdated; i swapped to an ESP32-S3 for cost + general accessibility reasons (will update anyway)]
+
 TAISO is based off the Teensy 4.1 combined with the PJRC Teensy Audio shield D. , in tandem with the PAM8403 Amplifier.
 My initial teensy & its replacement fried for reasons outside of my capability, so I switched to Arduino Nano's as a last ditch effort.
 thus, there are 2 versions of the architecture; Teensy 4.1 based & Arduino Nano based.
