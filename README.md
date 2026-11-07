@@ -15,7 +15,7 @@ Regardless of your accessibility & connection to art, everyone should have the *
 
 # Architecture
 
-[info is slightly outdated; i swapped to an ESP32-S3 for cost + general accessibility reasons (will update anyway)]
+[info is slightly outdated; i swapped to an ESP32-S3 for cost + general accessibility reasons (will update README soon.)]
 
 TAISO is based off the Teensy 4.1 combined with the PJRC Teensy Audio shield D. , in tandem with the PAM8403 Amplifier.
 My initial teensy & its replacement fried for reasons outside of my capability, so I switched to Arduino Nano's as a last ditch effort.
