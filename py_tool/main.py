@@ -1,11 +1,14 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import wave
+import os
 
 #this file lets you pick an sd card and a .wav file, the bpm and bar length, then it creates a folder on the sd card with the proper formatting so TAISO can use it.
 #UI PORTION OF THE CODE IS IN THIS FILE, BACKEND STUFF IS IN utils.py
 
-class TaisoAssetPrep:
+from utils import get_wav_info, export_loop_to_sd
+
+class TaisoAssetPrep: #set window parameters
     def __init__(self, root):
         self.root = root
         self.root.title("TAISO loop asset prep")
@@ -17,9 +20,15 @@ class TaisoAssetPrep:
         self.bpm_val = tk.StringVar(value="120")
         self.bars_val = tk.StringVar(value="4")
 
+        icon_path = os.path.join(os.path.dirname(__file__),"..","assets", "taiso.ico")
+        if os.path.exists(icon_path):
+            self.root.iconbitmap(icon_path)
+        else:
+            print("Icon file not found. Continuing without custom icon.")
+        
         self.build_ui()
 
-    def build_ui(self):
+    def build_ui(self): #create buttons & labels
         ttk.Label(self.root, text="TAISO asset prep", font=("Arial",14,"normal")).pack(pady = 12)
 
         ttk.Button(self.root, text = "1. select .wav file", command = self.pick_wav).pack(fill = "x", padx = 25, pady = 4)
@@ -43,7 +52,8 @@ class TaisoAssetPrep:
         ttk.Label(self.root, text="made by musti for hc phantom. <3 19560625", foreground ="gray",wraplength = 400).pack(side="bottom")
 
 
-    def pick_wav(self):
+    #file dialogues
+    def pick_wav(self): 
         path = filedialog.askopenfilename(filetypes=[("WAV files", "*.wav")])
         if path:
             self.wav_path.set(path)
@@ -53,6 +63,8 @@ class TaisoAssetPrep:
         if path:
             self.sd_path.set(path)
 
+
+    #self explanatory; takes all info inputted from before and writes to SD
     def export_to_sd(self):
         wav_src = self.wav_path.get()
         sd_dir = self.sd_path.get()
