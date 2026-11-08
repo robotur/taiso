@@ -11,7 +11,7 @@ from utils import get_wav_info, export_loop_to_sd
 class TaisoAssetPrep: #set window parameters
     def __init__(self, root):
         self.root = root
-        self.root.title("TAISO loop asset prep")
+        self.root.title("TAISO WAV FILE UPLOAD TOOL")
         self.root.geometry("600x400")
         self.root.resizable(False, False)
 
@@ -29,7 +29,7 @@ class TaisoAssetPrep: #set window parameters
         self.build_ui()
 
     def build_ui(self): #create buttons & labels
-        ttk.Label(self.root, text="TAISO asset prep", font=("Arial",14,"normal")).pack(pady = 12)
+        ttk.Label(self.root, text="TAISO .WAV FILE PREP", font=("Arial",14,"normal")).pack(pady = 12)
 
         ttk.Button(self.root, text = "1. select .wav file", command = self.pick_wav).pack(fill = "x", padx = 25, pady = 4)
         ttk.Label(self.root, textvariable=self.wav_path, foreground ="gray",wraplength = 400).pack()
