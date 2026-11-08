@@ -11,7 +11,7 @@ SdFat sd;
 
     void readJsonMetadata(const char* filepath) {
         File configFile = sd.open(filepath, FILE_READ);
-        if (!configfile) {
+        if (!configFile) {
             Serial.print("[err] failed to open: ");
             Serial.println(filepath);
             return;
